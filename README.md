@@ -1,6 +1,24 @@
-# foster-client
+# Foster Connect App | foster-client
 
-As a foster parent
+As a foster parent you are required to complete a significant amount of documentation and training. This is an ongoing process and is required for each child on multiple occassions. It can also be difficult for foster parents to find a support netowrk of other foster parents. The Foster Connect app will allow foster parents to create an account that gives them the ability to connect with other foster parents. They will also be able to create profiles for the children in thier care to keep documents and information organized. 
+
+
+# MVP & Stretch Goals
+
+#### MVP
+- Frontend Git Repo - https://github.com/gumtow/foster-client
+- Backend Git Repo - https://github.com/gumtow/foster-api
+- App built with React and Ruby on Rails
+- CRUD functionality for user accounts
+- CRUD functionality for child profiles
+- Use React Redux
+- Deploy site using Netlify
+
+#### Stretch Goals
+- Lazy loading
+- user will have the ability to add & organize pictures
+- Create a dynamic slideshow from pictures
+
 
 # User Stories
 
@@ -12,24 +30,19 @@ As a foster parent
 - Add documents to children's profile to keep them organized
 
 
-
-# MVP & Stretch Goals
-
-
 # Wireframes
 
 
 # Project Timeline
 
-### MVP
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jul 25| Project Description | -
 |Jul 26| Wireframes /  Timeline | -
-|Jul 28| Core Application Structure (Rails Server, React) | -
-|Jul 29| MVP & Bug Fixes | -
-|Aug 04| Final Touches | -
+|Jul 27| Finish Redux Training 2.5 hrs Wes Bos course | - 
+|Jul 28| Core Application Structure (Rails Server, React, Redux) | -
+|Jul 29-31| MVP & Bug Fixes | -
+|Aug 01| App styling | -
+|Aug 04| Stretch Goals | -
+|Aug 05| Final styling tweaks | -
 |Aug 08| Present | -
-
-
-### Stretch Goals
