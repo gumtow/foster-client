@@ -1,5 +1,7 @@
 # foster-client
 
+As a foster parent
+
 # User Stories
 
 #### A user will be able to ...
@@ -7,7 +9,7 @@
 - Create, Read, Update & Delete their account
 - Create, Read, Update & Delete profiles for children in their care
 - Create & Send messages to other users
-- 
+- Add documents to children's profile to keep them organized
 
 
 
@@ -22,12 +24,12 @@
 ### MVP
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jul 8| Project Description | Complete
-|Jul 8| Wireframes /  Timeline | Complete
-|Jul 8| Core Application Structure (Rails Server, React) | Incomplete
-|Jul 10| MVP & Bug Fixes | Incomplete
-|Jul 11| Final Touches | Incomplete
-|Jul 11| Present | Incomplete
+|Jul 25| Project Description | -
+|Jul 26| Wireframes /  Timeline | -
+|Jul 28| Core Application Structure (Rails Server, React) | -
+|Jul 29| MVP & Bug Fixes | -
+|Aug 04| Final Touches | -
+|Aug 08| Present | -
 
 
 ### Stretch Goals
