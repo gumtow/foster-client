@@ -11,7 +11,7 @@ As a foster parent you are required to complete a significant amount of document
 - App built with React and Ruby on Rails
 - CRUD functionality for user accounts
 - CRUD functionality for child profiles
-- Use React Redux
+- Use React Redux to handle state
 - Deploy site using Netlify
 
 #### Stretch Goals
@@ -30,16 +30,24 @@ As a foster parent you are required to complete a significant amount of document
 - Add documents to children's profile to keep them organized
 
 
+# Flowchart
+
+<img src="https://raw.githubusercontent.com/gumtow/foster-client/master/FosterConnectApp.png" width=750 >
+
+
 # Wireframes
 
 ### Homepage
 <img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-home.png" width=750 >
 
+
 ### Sign in Page
 <img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-home-sign-in.png" width=750>
 
+
 ### Profile Page
 <img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-Profile.png" width=750>
+
 
 # Project Timeline
 
