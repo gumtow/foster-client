@@ -2,7 +2,7 @@
 
 As a foster parent you are required to complete a significant amount of documentation and training. This is an ongoing process and is required for each child on multiple occassions. It can also be difficult for foster parents to find a support netowrk of other foster parents. The Foster Connect app will allow foster parents to create an account that gives them the ability to connect with other foster parents. They will also be able to create profiles for the children in thier care to keep documents and information organized. 
 
-
+# 
 # Project Timeline
 
 |  Day | Deliverable | Status
@@ -20,7 +20,7 @@ As a foster parent you are required to complete a significant amount of document
 |Jul 29| Sign in, Create Profile, Resources Pages | -
 |Jul 30| Profile Pages (RUD) | -
 |Jul 31| Child Profile Pages (CRUD) | -
-|Aug 01| Picture & Document SHow All Pages | -
+|Aug 01| Picture & Document Show All Pages | -
 |Ongoing| App styling | -
 |Ongoing| Testing & Debugging | -
 |Aug 03| Messageboard Page (CRUD) | -
@@ -28,7 +28,7 @@ As a foster parent you are required to complete a significant amount of document
 |Aug 06| Presentation Prep | -
 |Aug 08| Present | -
 
-
+# 
 # MVP & Stretch Goals
 
 #### MVP
@@ -45,7 +45,7 @@ As a foster parent you are required to complete a significant amount of document
 - Create & Send messages via messageboard
 - Create a dynamic slideshow from pictures
 
-
+# 
 # User Stories
 
 #### A user will be able to ...
@@ -55,7 +55,7 @@ As a foster parent you are required to complete a significant amount of document
 - Add pictures
 - Add documents to children's profile to keep them organized
 
-
+# 
 # Database Structure
 - Users
   - Name
@@ -69,16 +69,15 @@ As a foster parent you are required to complete a significant amount of document
 - Messageboard
   - Subject
   - Content
-  - User
-    - Name (DB)
+  - User (DB)
+    - Name 
 
-
-
+# 
 # Flowchart
 
 <img src="https://raw.githubusercontent.com/gumtow/foster-client/master/FosterConnectApp.png" width=750 >
 
-
+# 
 # Wireframes
 
 ### Homepage
