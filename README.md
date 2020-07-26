@@ -32,6 +32,14 @@ As a foster parent you are required to complete a significant amount of document
 
 # Wireframes
 
+### Homepage
+<img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-home.png" width=750 >
+
+### Sign in Page
+<img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-home-sign-in.png" width=750>
+
+### Profile Page
+<img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-Profile.png" width=750>
 
 # Project Timeline
 
