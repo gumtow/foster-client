@@ -3,6 +3,32 @@
 As a foster parent you are required to complete a significant amount of documentation and training. This is an ongoing process and is required for each child on multiple occassions. It can also be difficult for foster parents to find a support netowrk of other foster parents. The Foster Connect app will allow foster parents to create an account that gives them the ability to connect with other foster parents. They will also be able to create profiles for the children in thier care to keep documents and information organized. 
 
 
+# Project Timeline
+
+|  Day | Deliverable | Status
+|---|---| ---|
+|Jul 25| Project Description | Done
+|Jul 26| Wireframes | Done
+|Jul 26| Flowchart | Done
+|Jul 26| Timeline | Done
+|Jul 26| Database Relationship Chart | Done
+|Jul 27| Finish Redux Training 2.5 hrs Wes Bos course | Done 
+|Jul 28| Create API - Ruby on Rails | -
+|Jul 28| Seed User, Children & Messages (Faker?) | -
+|Jul 28| Seed Resources by hand | -
+|Jul 29| Create React App | -
+|Jul 29| Sign in, Create Profile, Resources Pages | -
+|Jul 30| Profile Pages (RUD) | -
+|Jul 31| Child Profile Pages (CRUD) | -
+|Aug 01| Picture & Document SHow All Pages | -
+|Ongoing| App styling | -
+|Ongoing| Testing & Debugging | -
+|Aug 03| Messageboard Page (CRUD) | -
+|Aug 05| Final styling tweaks | -
+|Aug 06| Presentation Prep | -
+|Aug 08| Present | -
+
+
 # MVP & Stretch Goals
 
 #### MVP
@@ -16,7 +42,7 @@ As a foster parent you are required to complete a significant amount of document
 
 #### Stretch Goals
 - Lazy loading
-- user will have the ability to add & organize pictures
+- Create & Send messages via messageboard
 - Create a dynamic slideshow from pictures
 
 
@@ -26,8 +52,26 @@ As a foster parent you are required to complete a significant amount of document
 - sign up for, and login to their account
 - Create, Read, Update & Delete their account
 - Create, Read, Update & Delete profiles for children in their care
-- Create & Send messages to other users
+- Add pictures
 - Add documents to children's profile to keep them organized
+
+
+# Database Structure
+- Users
+  - Name
+  - Password
+  - Children (DB)
+- Children
+  - Name
+  - Status
+  - Pictures
+  - Documents
+- Messageboard
+  - Subject
+  - Content
+  - User
+    - Name (DB)
+
 
 
 # Flowchart
@@ -48,17 +92,3 @@ As a foster parent you are required to complete a significant amount of document
 ### Profile Page
 <img src="https://raw.githubusercontent.com/gumtow/foster-client/master/Desktop-Profile.png" width=750>
 
-
-# Project Timeline
-
-|  Day | Deliverable | Status
-|---|---| ---|
-|Jul 25| Project Description | -
-|Jul 26| Wireframes /  Timeline | -
-|Jul 27| Finish Redux Training 2.5 hrs Wes Bos course | - 
-|Jul 28| Core Application Structure (Rails Server, React, Redux) | -
-|Jul 29-31| MVP & Bug Fixes | -
-|Aug 01| App styling | -
-|Aug 04| Stretch Goals | -
-|Aug 05| Final styling tweaks | -
-|Aug 08| Present | -
