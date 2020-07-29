@@ -31,7 +31,9 @@ export default class Registration extends Component {
         }, 
         { withCredentials: true }
         ).then(response =>{
-            console.log("reg response", response);
+            if (response.data.status === 'created') {
+                this.props.handleSuccessfulAuth(response.data);
+            }
         }).catch(errors =>{
             console.log("reg error", error);
         })
