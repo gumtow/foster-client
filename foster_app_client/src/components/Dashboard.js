@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,7 +13,8 @@ export default class Dashboard extends Component {
             name:"",
             status:"Active",
             pictures: [],
-            documents:[]
+            documents:[],
+            children: []
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,6 +22,20 @@ export default class Dashboard extends Component {
 
     }
 
+
+    getChildData(){
+        axios.get("http://localhost:3001/children", {withCredentials: true}).then(response => {
+            this.setState({
+                children: response.data
+            })
+        }).catch(error => {
+            console.log("children db", error);
+        })
+    }
+
+    componentDidMount(){
+        this.getChildData();
+    }
 
     handleChange(event) {
         this.setState({
@@ -37,7 +53,7 @@ export default class Dashboard extends Component {
         }, 
         { withCredentials: true }
         ).then(response =>{
-            console.log(response);
+            // console.log(response);
             this.setState({
                 name:"",
                 status:"Active",
@@ -59,7 +75,7 @@ export default class Dashboard extends Component {
     }
     
     render(){
-        console.log(this.props.user.id)
+        // console.log(this.props.user.id)
         return (
             <div>
                 <div>
@@ -73,6 +89,18 @@ export default class Dashboard extends Component {
                         <input type="string" name="documents" placeholder="document url" value={this.state.documents} onChange={this.handleChange} required />
                         <button type="submit">Add Child</button>
                     </form>
+                    <div>
+                        {this.state.children.map((child, i)=>{
+                            if (child.user_id === this.props.user.id){
+                                return(
+                                    <div key={i}>
+                                        <Link to={`/child/${child.id}`} child={child}><h3>{child.name}</h3></Link>
+                                        <p>{child.status}</p>
+                                    </div>
+                                )
+                            }
+                        })}
+                    </div>
                 </div>
             </div>
         );
