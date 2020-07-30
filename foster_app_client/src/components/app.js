@@ -24,7 +24,7 @@ export default class App extends Component {
           loggedInStatus: "LOGGED_IN",
           user: response.data.user
         })
-      } else if (!response.data.logge_in && this.state.loggedInStatus === "LOGGED_IN"){
+      } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN"){
         this.setState({
           loggedInStatus: "NOT_LOGGED_IN",
           user: {}
@@ -68,7 +68,7 @@ export default class App extends Component {
             <Route 
             exact path={"/dashboard"} 
             render= {props => (
-              <Dashboard {...props} loggedInStatus={this.state.loggedInStatus} handleLogout = {this.handleLogout} />
+              <Dashboard {...props} loggedInStatus={this.state.loggedInStatus} handleLogout = {this.handleLogout} user={this.state.user}/>
             )}
             />
           </Switch>
