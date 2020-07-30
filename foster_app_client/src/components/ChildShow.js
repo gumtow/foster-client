@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 export default class ChildShow extends Component {
 
@@ -15,10 +17,7 @@ export default class ChildShow extends Component {
 
     getChildData(){
         axios.get(`http://localhost:3001/children/${this.props.match.params.id}`, {withCredentials: true}).then(response => {
-            console.log(response.data.name);
             this.setState({
-                name: response.data.name,
-                status: response.data.status,
                 child: response.data
             })
         }).catch(error => {
@@ -40,14 +39,17 @@ export default class ChildShow extends Component {
     }
 
     render(){
-            console.log(this.state);
+        if (this.state.child){
             return(
                 <div>
                     <button onClick={()=>this.handleLogoutClick()}>Logout</button>
-                    <h1>Hello {this.state.name}</h1>
-                    {this.state.child ? <p>{this.state.child.status}</p> : ''}
+                    <h1>Hello {this.state.child.name}</h1>
+                    <Link to={`/children/${this.state.child.id}/edit`}><button>Edit</button></Link>
                 </div>
             )
+        } else {
+            return "...loading"
+        }
     }
 }
 

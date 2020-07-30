@@ -62,6 +62,7 @@ export default class Dashboard extends Component {
             })
             }
         );
+        getChildData();
         event.preventDefault();
     };
 
@@ -73,6 +74,18 @@ export default class Dashboard extends Component {
             console.log("logout error", error);
         }); 
     }
+
+    handleDelete(id){
+        axios.delete(`http://localhost:3001/children/${id}`, { withCredentials: true }).then(response =>{
+            console.log(response);
+            this.getChildData();
+        }).catch(error => {
+            console.log("logout error", error);
+        }); 
+
+    }
+
+
     
     render(){
         // console.log(this.props.user.id)
@@ -92,10 +105,13 @@ export default class Dashboard extends Component {
                     <div>
                         {this.state.children.map((child, i)=>{
                             if (child.user_id === this.props.user.id){
+                                // console.log(child.id);
                                 return(
                                     <div key={i}>
                                         <Link to={`/child/${child.id}`} child={child}><h3>{child.name}</h3></Link>
                                         <p>{child.status}</p>
+                                        <Link to={`/children/${child.id}/edit`}><button>Edit</button></Link>
+                                        <button onClick={()=>this.handleDelete(`${child.id}`)}>DELETE</button>
                                     </div>
                                 )
                             }

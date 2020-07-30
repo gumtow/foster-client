@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './Home';
 import Dashboard from './Dashboard';
 import ChildShow from './ChildShow';
+import ChildEdit from './ChildEdit';
 
 export default class App extends Component {
   constructor() {
@@ -76,6 +77,12 @@ export default class App extends Component {
             exact path={"/child/:id"} 
             render= {props => (
               <ChildShow {...props} loggedInStatus={this.state.loggedInStatus} handleLogout = {this.handleLogout} user={this.state.user}/>
+            )}
+            />
+            <Route 
+            exact path={"/children/:id/edit"} 
+            render= {props => (
+              <ChildEdit {...props} loggedInStatus={this.state.loggedInStatus} handleLogout = {this.handleLogout} user={this.state.user}/>
             )}
             />
           </Switch>
