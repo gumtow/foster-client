@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Registration from './auth/Registration'
 import Login from './auth/Login';
+import Default from '../Default';
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     constructor(props) {
         super(props);
-
-        this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
         this.handleLogoutClick = this.handleLogoutClick.bind(this);
     }
 
-    handleSuccessfulAuth(data) {
-        this.props.handleLogin(data);
-        this.props.history.push("/dashboard");
-    }
 
     handleLogoutClick() {
         axios.delete("http://localhost:3001/logout", { withCredentials: true }).then(response =>{
@@ -24,14 +20,24 @@ export default class Home extends Component {
         });       
     }
 
+
+  
+
   render() {
     return (
       <div className='home'>
-        <h1>Home</h1>
-        <h2>Status: {this.props.loggedInStatus}</h2>
-        <button onClick={()=>this.handleLogoutClick()} >Logout</button>
-        <Registration handleSuccessfulAuth = {this.handleSuccessfulAuth} />
-        <Login handleSuccessfulAuth = {this.handleSuccessfulAuth} />
+        <Default bg="#495867">
+          <h1>Home</h1>
+          <h2>Status: {this.props.loggedInStatus}</h2>
+          {this.props.loggedInStatus === "NOT_LOGGED_IN" ? <Link to="/login"><button>Log In</button></Link> : <button onClick={()=>this.handleLogoutClick()} >Logout</button> }
+          
+          
+        </Default>
+
+        <Default bg="#fff">
+
+        </Default>
+
       </div>
     );
   }

@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import Home from './Home';
 import Dashboard from './Dashboard';
 import ChildShow from './ChildShow';
 import ChildEdit from './ChildEdit';
+import Login from './auth/Login';
+import history from './history';
+import Registration from './auth/Registration';
 
-export default class App extends Component {
+
+ class App extends Component {
   constructor() {
     super();
 
@@ -17,6 +21,7 @@ export default class App extends Component {
 
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
   }
 
   checkLoginStatus(){
@@ -40,6 +45,11 @@ export default class App extends Component {
   componentDidMount() {
     this.checkLoginStatus();
   }
+
+  handleSuccessfulAuth(data) {
+    this.handleLogin(data);
+    history.push("/dashboard");
+}
 
   handleLogout(){
     this.setState({
@@ -68,6 +78,18 @@ export default class App extends Component {
             )}
             />
             <Route 
+            exact path={"/login"} 
+            render= {props => (
+              <Login {...props} handleLogin = {this.handleLogin} handleLogout = {this.handleLogout} loggedInStatus={this.state.loggedInStatus} handleSuccessfulAuth = {this.handleSuccessfulAuth} />
+            )}
+            />
+            <Route 
+            exact path={"/register"} 
+            render= {props => (
+              <Registration {...props} handleLogin = {this.handleLogin} handleLogout = {this.handleLogout} loggedInStatus={this.state.loggedInStatus} handleSuccessfulAuth = {this.handleSuccessfulAuth} />
+            )}
+            />
+            <Route 
             exact path={"/dashboard"} 
             render= {props => (
               <Dashboard {...props} loggedInStatus={this.state.loggedInStatus} handleLogout = {this.handleLogout} user={this.state.user}/>
@@ -91,3 +113,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default withRouter(App);

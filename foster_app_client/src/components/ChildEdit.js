@@ -50,7 +50,7 @@ export default class ChildEdit extends Component {
             }
         );
         // getChildData();
-        // event.preventDefault();
+        event.preventDefault();
     };
 
     handleLogoutClick=()=> {

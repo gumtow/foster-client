@@ -98,7 +98,7 @@ export default class Dashboard extends Component {
                     <form onSubmit={this.handleSubmit} >
                         <input type="string" name="name" placeholder="Child's name" value={this.state.name} onChange={this.handleChange} required />
                         <input type="string" name="status" placeholder={this.state.status} value={this.state.status} onChange={this.handleChange} required />
-                        <input type="string" name="pictures" placeholder="picture url" value={this.state.pictures} onChange={this.handleChange} required />
+                        <input type="file" name="pictures" placeholder="picture url" value={this.state.pictures} onChange={this.handleChange} required />
                         <input type="string" name="documents" placeholder="document url" value={this.state.documents} onChange={this.handleChange} required />
                         <button type="submit">Add Child</button>
                     </form>

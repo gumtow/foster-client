@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
     constructor(props){
@@ -33,7 +34,7 @@ export default class Login extends Component {
             if (response.data.logged_in) {
                 this.props.handleSuccessfulAuth(response.data);
             }
-        }).catch(errors =>{
+        }).catch(error =>{
             console.log("login error", error);
         })
         event.preventDefault();
@@ -48,6 +49,7 @@ export default class Login extends Component {
 
             <button type="submit">login</button>
         </form>
+        <Link to="/register">Don't have an account?</Link>
       </div>
     );
   }
