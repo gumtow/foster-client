@@ -5,6 +5,7 @@ import Home from './Home';
 import Dashboard from './Dashboard';
 import ChildShow from './ChildShow';
 import ChildEdit from './ChildEdit';
+import UserEdit from './auth/UserEdit';
 import Login from './auth/Login';
 import history from './history';
 import Registration from './auth/Registration';
@@ -87,6 +88,12 @@ import Registration from './auth/Registration';
             exact path={"/register"} 
             render= {props => (
               <Registration {...props} handleLogin = {this.handleLogin} handleLogout = {this.handleLogout} loggedInStatus={this.state.loggedInStatus} handleSuccessfulAuth = {this.handleSuccessfulAuth} />
+            )}
+            />
+            <Route 
+            exact path={"/useredit/:id"} 
+            render= {props => (
+              <UserEdit {...props} handleLogin = {this.handleLogin} handleLogout = {this.handleLogout} loggedInStatus={this.state.loggedInStatus} handleSuccessfulAuth = {this.handleSuccessfulAuth} user={this.state.user}/>
             )}
             />
             <Route 

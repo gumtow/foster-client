@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Default from '../Default';
 
 
 
@@ -90,10 +91,11 @@ export default class Dashboard extends Component {
     render(){
         // console.log(this.props.user.id)
         return (
-            <div>
+            <Default>
                 <div>
                     <h1>Dashboard</h1>
                     <button onClick={()=>this.handleLogoutClick()}>Logout</button>
+                    <Link to={`/useredit/${this.props.user.id}`} user={this.props.user}><button>Edit User Profile</button></Link>
                     <h2>Status: {this.props.loggedInStatus}</h2>
                     <form onSubmit={this.handleSubmit} >
                         <input type="string" name="name" placeholder="Child's name" value={this.state.name} onChange={this.handleChange} required />
@@ -118,7 +120,7 @@ export default class Dashboard extends Component {
                         })}
                     </div>
                 </div>
-            </div>
+            </Default>
         );
 
     }
